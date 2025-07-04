@@ -99,10 +99,10 @@ class BuildSelector:
             return False
         if EnableGroup.GraalPy not in self.enable and fnmatch(build_id, "gp*"):
             return False
-        #if EnableGroup.PyodidePrerelease not in self.enable and fnmatch(
-        #    build_id, "cp313-pyodide_*"
-        #):
-        #    return False
+        # if EnableGroup.PyodidePrerelease not in self.enable and fnmatch(
+        #     build_id, "cp313-pyodide_*"
+        # ):
+        #     return False
 
         should_build = selector_matches(self.build_config, build_id)
         should_skip = selector_matches(self.skip_config, build_id)
